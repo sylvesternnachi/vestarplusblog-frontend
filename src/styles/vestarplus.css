@@ -1,0 +1,259 @@
+/* ============================================================
+   Vestarplus Blog — shared styles
+   Built on Bootstrap 5. Brand blue: #2f80ed
+   ============================================================ */
+
+:root {
+  --vp-blue: #2f80ed;
+  --vp-blue-dark: #1f6fdd;
+  --vp-ink: #0f1729;
+  --vp-body: #4a5568;
+  --vp-muted: #8a94a6;
+  --vp-line: #e8ecf3;
+  --vp-bg: #ffffff;
+  --vp-bg-soft: #f6f8fb;
+  --vp-dark: #0c0c0e;
+  --vp-pink: #fdeceb;
+  --vp-pink-accent: #f06360;
+}
+
+* { -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--vp-body);
+  background: var(--vp-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--vp-ink);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a { text-decoration: none; }
+
+.container-vp { max-width: 1160px; }
+
+/* ---------- Buttons ---------- */
+.btn-vp {
+  background: var(--vp-blue);
+  border: 1px solid var(--vp-blue);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.4rem;
+  transition: background .15s ease, transform .15s ease;
+}
+.btn-vp:hover { background: var(--vp-blue-dark); color: #fff; transform: translateY(-1px); }
+
+.btn-vp-outline {
+  background: transparent;
+  border: 1px solid var(--vp-line);
+  color: var(--vp-ink);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.4rem;
+  transition: border-color .15s ease, color .15s ease;
+}
+.btn-vp-outline:hover { border-color: var(--vp-blue); color: var(--vp-blue); }
+
+/* ---------- Navbar ---------- */
+.vp-navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--vp-line);
+  padding: 0.9rem 0;
+}
+.vp-navbar .navbar-brand img { height: 30px; }
+.vp-navbar .nav-link {
+  color: var(--vp-ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.25rem 0.9rem;
+}
+.vp-navbar .nav-link:hover { color: var(--vp-blue); }
+
+/* ---------- Section heading ---------- */
+.section-eyebrow {
+  color: var(--vp-blue);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: none;
+  margin-bottom: 0.5rem;
+}
+.section-title { font-size: 2rem; }
+.section-sub { color: var(--vp-muted); max-width: 560px; }
+
+/* ---------- Search ---------- */
+.vp-search {
+  background: var(--vp-bg-soft);
+  border: 1px solid var(--vp-line);
+  border-radius: 12px;
+  padding: 0.4rem 0.5rem 0.4rem 1rem;
+}
+.vp-search input {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--vp-ink);
+}
+.vp-search input:focus { outline: none; box-shadow: none; }
+
+/* ---------- Blog card ---------- */
+.post-card {
+  display: block;
+  height: 100%;
+}
+.post-card .thumb {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--vp-bg-soft);
+}
+.post-card .thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .4s ease;
+}
+.post-card:hover .thumb img { transform: scale(1.04); }
+
+.post-meta {
+  font-size: 0.8rem;
+  color: var(--vp-muted);
+  font-weight: 500;
+}
+.post-card h3 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 0.6rem 0 0.4rem;
+  color: var(--vp-ink);
+}
+.post-card:hover h3 { color: var(--vp-blue); }
+.read-more {
+  color: var(--vp-blue);
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ---------- Newsletter / dark CTA ---------- */
+.vp-cta {
+  position: relative;
+  background: var(--vp-dark);
+  color: #fff;
+  overflow: hidden;
+}
+.vp-cta .rings {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 620px;
+  max-width: 90%;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.vp-cta h2 { color: #fff; font-size: 2rem; }
+.vp-cta .lead-sub { color: rgba(255,255,255,.6); }
+.vp-cta .news-form {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 0.35rem;
+}
+.vp-cta .news-form input {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  box-shadow: none;
+}
+.vp-cta .news-form input::placeholder { color: rgba(255,255,255,.45); }
+.vp-cta .news-form input:focus { outline: none; box-shadow: none; }
+
+/* ---------- Footer ---------- */
+.vp-footer {
+  background: var(--vp-dark);
+  color: rgba(255,255,255,.55);
+  position: relative;
+  overflow: hidden;
+}
+.vp-footer h6 {
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.vp-footer a { color: rgba(255,255,255,.55); font-size: 0.9rem; }
+.vp-footer a:hover { color: #fff; }
+.vp-footer .wordmark {
+  font-weight: 800;
+  font-size: clamp(3.5rem, 16vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--vp-blue);
+  margin: 0;
+  white-space: nowrap;
+}
+.footer-divider { border-color: rgba(255,255,255,.1); }
+
+/* ---------- Article ---------- */
+.article-eyebrow { color: var(--vp-blue); font-weight: 600; font-size: 0.85rem; }
+.article-title { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; }
+.author-row { color: var(--vp-muted); font-size: 0.9rem; }
+.author-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--vp-blue); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.85rem;
+}
+.article-hero {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e9f0fb;
+}
+.article-hero img { width: 100%; display: block; }
+
+.article-body { font-size: 1.05rem; color: var(--vp-body); }
+.article-body h2 {
+  font-size: 1.4rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.9rem;
+}
+.article-body p { margin-bottom: 1.1rem; }
+.article-body ul { padding-left: 1.2rem; margin-bottom: 1.3rem; }
+.article-body li { margin-bottom: 0.5rem; }
+.article-body strong { color: var(--vp-ink); }
+
+/* promo card inside article */
+.promo-card {
+  background: var(--vp-pink);
+  border-radius: 16px;
+  padding: 2rem;
+}
+.promo-card .tag {
+  color: var(--vp-pink-accent);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.promo-card h3 { font-size: 1.5rem; color: var(--vp-ink); }
+.btn-pink {
+  background: var(--vp-pink-accent);
+  color: #fff; border: 0; font-weight: 600;
+  border-radius: 10px; padding: 0.55rem 1.3rem;
+}
+.btn-pink:hover { background: #d94e4b; color: #fff; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+@media (max-width: 575.98px) {
+  .section-title { font-size: 1.6rem; }
+  .vp-cta h2 { font-size: 1.5rem; }
+}
