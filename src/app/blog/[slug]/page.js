@@ -75,7 +75,7 @@ export default async function ArticlePage({ params }) {
                   <span>{formatDate(article.publishedDate)}</span>
                   <span className="mx-1">·</span>
                   <span>{article.readTime} min read</span>
-                  <ShareButtons slug={article.slug} title={article.title} />
+                 
                 </div>
 
                 {article.cover && (
@@ -94,14 +94,18 @@ export default async function ArticlePage({ params }) {
                 <div className="article-body">
                   <Markdown>{article.body}</Markdown>
 
+                  <hr />
+
+                   <ShareButtons slug={article.slug} title={article.title} />
+
                   {/* In-article promo card from the design */}
                   <div className="promo-card my-5">
                     <p className="tag mb-2">Vestarplus</p>
                     <h3 className="mb-2">Grow your product with our design speed</h3>
                     <p className="mb-3">
-                      Grow your product with our design speed
+                     Let’s help you review your product and grow your product/website
                     </p>
-                    <a href="#" className="btn-pink">Get Started</a>
+                    <a href="https://vestarplus.com/contact" className="btn-pink">Get Started</a>
                   </div>
                 </div>
               </div>
