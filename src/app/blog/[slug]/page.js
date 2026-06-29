@@ -103,7 +103,7 @@ export default async function ArticlePage({ params }) {
                     <p className="tag mb-2">Vestarplus</p>
                     <h3 className="mb-2">Grow your product with our design speed</h3>
                     <p className="mb-3">
-                     Let’s help you review your product and grow your product/website
+                     Let’s review grow your product/website
                     </p>
                     <a href="https://vestarplus.com/contact" className="btn-pink">Get Started</a>
                   </div>
