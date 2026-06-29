@@ -248,6 +248,25 @@ a { text-decoration: none; }
 }
 .btn-pink:hover { background: #d94e4b; color: #fff; }
 
+.share-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--vp-line);
+  background: #fff;
+  color: var(--vp-ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.share-btn:hover {
+  border-color: var(--vp-blue);
+  color: var(--vp-blue);
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }

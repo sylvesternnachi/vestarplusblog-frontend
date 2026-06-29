@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import ShareButtons from '@/components/ShareButtons';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -74,6 +75,7 @@ export default async function ArticlePage({ params }) {
                   <span>{formatDate(article.publishedDate)}</span>
                   <span className="mx-1">·</span>
                   <span>{article.readTime} min read</span>
+                  <ShareButtons slug={article.slug} title={article.title} />
                 </div>
 
                 {article.cover && (
