@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Blog — Vestarplus',
+  title: 'Vestarplus Blog',
   description:
     'New & noteworthy stories, guides and updates from the Vestarplus team.',
 };
